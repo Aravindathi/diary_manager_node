@@ -44,6 +44,11 @@ async function createConnection() {
 }
 // code ends here 
 
+app.get("/",async (req,res) => {
+  console.log(res)
+  res.send("Hi this is landing page for tes")
+})
+
 // Signup function and its routes 
 app.post("/signup", async (req, res) => {
   const { userName, userEmail, userPassword } = req.body;
@@ -79,10 +84,7 @@ app.post("/signup", async (req, res) => {
 
 
 
-app.get("/",async (req,res) => {
-  console.log(res)
-  res.send("Hi this is landing page for tes")
-})
+
 
 // post request code on signin 
 app.post("/login",async (req,res) => {
