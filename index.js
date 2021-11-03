@@ -76,7 +76,8 @@ app.post("/signup", async (req, res) => {
       console.log('Email sent: ' + info.response);
     }
   })
-  // mail code ends here 
+  // mail code ends here npm run dev
+
  
 });
 
