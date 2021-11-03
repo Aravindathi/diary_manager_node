@@ -21,13 +21,14 @@ var transporter = nodemailer.createTransport({
 
 let PORT = process.env.PORT;
 const Mongo_Url = process.env.Mongo_Url;
-const Unique_Key = process.env.Unique_Key;
+const key = process.env.Unique_Key;
 
 
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+dotenv.config()
 
 // MongoDB connectivity fucntion
 async function createConnection() {
@@ -101,7 +102,7 @@ app.post("/login",async (req,res) => {
         if(ispasstrue)
         {
       
-          const token=jwt.sign({id:value._id},Unique_Key);
+          const token=jwt.sign({id:value._id},key);
           if(token)
           {
           res.send({token:token, id : value._id});  
