@@ -93,7 +93,7 @@ app.post("/signup", async (req, res) => {
 app.post("/login",async (req,res) => {
   const {userName,userPassword} = req.body;
   const value =await searchedUser(userName);
-
+  console.log(userName)
   if(value)
   {
     const actualPassword =value.userPassword;
@@ -107,6 +107,7 @@ app.post("/login",async (req,res) => {
           if(token)
           {
           res.send({token:token, id : value._id});  
+          console.log(token)
           }
         }
         else{
