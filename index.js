@@ -81,7 +81,7 @@ app.post("/signup", async (req, res) => {
 
 app.get("/",async (req,res) => {
   console.log(res)
-  res.send("Hi this is landing page for test")
+  res.send("Hi this is landing page for tes")
 })
 
 // post request code on signin 
