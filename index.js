@@ -5,6 +5,7 @@ import bcrypt, { compare } from "bcrypt";
 import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer"
 import auth from "./middleware/auth.js";
+import dotenv from "dotenv"
 
 
 
