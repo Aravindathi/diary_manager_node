@@ -19,11 +19,11 @@ var transporter = nodemailer.createTransport({
 // code ends here 
 
 
+let PORT = process.env.PORT;
+const Mongo_Url = process.env.Mongo_Url;
+const Unique_Key = process.env.Unique_Key;
 
 
-let PORT = 3001;
-const Mongo_Url = "mongodb+srv://aravindathi:Arav1812@mydb.ppt4u.mongodb.net";
-const Unique_Key = "abcd";
 
 const app = express();
 app.use(express.json());
